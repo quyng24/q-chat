@@ -8,6 +8,7 @@ var clickSetting1 = document.querySelector('.setting1');
 var hidenSetting = document.querySelector('.setting.demo');
 var hidenSetting1 = document.querySelector('.setting1.demo1');
 var wrapperBtn = document.querySelector('.wrapper-btn');
+var wrapperBtn1 = document.querySelector('.setting1 .wrapper-btn');
 var searchInput = document.querySelector('.search-input input');
 var userChats = document.querySelectorAll('.user-chat');
 var groupUser = document.querySelector('.group-user');
@@ -29,6 +30,9 @@ clickSetting1.addEventListener('click', () => {
     clickSetting1.classList.remove('demo1');
 })
 wrapperBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+})
+wrapperBtn1.addEventListener('click', (e) => {
     e.stopPropagation();
 })
 userChats.forEach(chat => {

@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     height: 100vh;
@@ -7,106 +12,149 @@ body {
     justify-content: center;
     align-items: center;
 }
+.login-box {
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: solid 2px #fff;
+    border-radius: 20px;
+    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    padding: 30px;
+}
+h2 {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    transition: .5s ease;
+}
+.input-box {
+    position: relative;
+    width: 310px;
+    margin: 30px 0;
+}
+.input-box .input-line {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2.5px;
+    background: #fff;
+    transition: .5s ease;
+}
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s ease;
+}
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+.input-box input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 35px 0 5px;
+    transition: 0.5s ease;
+}
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 57px;
+    transition: .5s ease;
+}
+.remember-forgot {
+    color: #fff;
+    font-size: .9em;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    transition: .5s ease;
+}
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 3px;
+    transition: .5s ease;
+}
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+    transition: color .5s ease;
+}
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+button {
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #191919;
+    font-weight: 500;
+    transition: .5s ease;
+}
+
+.glowing-light {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 10px;
+    background: #00f7ff;
+    border-radius: 20px;
+}
+.register-link {
+    color: #fff;
+    font-size: .9em;
+    text-align: center;
+    margin: 25px 0 10px;
+    transition: .5s ease;
+}
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color .5s ease;
+}
+.register-link p a:hover {
+    text-decoration: underline;
+}
+.light {
+    position: absolute;
+    top: -200%;
+    left: -11px;
+    width: 105%;
+    height: 950px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1.3) -50%, rgba(255, 255, 255, 0) 90%);
+    clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+    pointer-events: none;
+    transition: .5s ease;
+}
 .not-loaded {
     width: 70%;
     display: block;
-}
-.welcome-qbook {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 50px;
-    color: white;
-    font-family: "Playfair Display", serif;
-    opacity: 1;
-    animation: word-animation 2s ease-in-out forwards;
-}
-.container {
-    position: relative;
-}
-.formBox {
-    font-family: Arial, Helvetica, sans-serif;
-    height: 480px;
-    width: 400px;
-    position: relative;
-    margin: 6% auto;
-    padding: 5px;
-    overflow: hidden;
-    border: 1px solid #fff;
-    border-radius: 8px;
-    z-index: 3;
-}
-.buttonBox {
-    width: 220px;
-    margin: 55px auto 30px auto;
-    position: relative;
-    border: 0;
-    border-radius: 30px;
-    box-shadow: 0 0 20px 9px #1212091f;
-}
-.toggleBtn {
-    padding: 10px 30px;
-    color: #fff;
-    cursor: pointer;
-    position: relative;
-    border: 0;
-    outline: none;
-    background: transparent;
-}
-#btn {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 110px;
-    height: 100%;
-    border-radius: 30px;
-    background: linear-gradient(-45deg, #5f91ff, rgba(0, 0, 255, 0));
-}
-.inputGroup {
-    position: absolute;
-    top: 150px;
-    width: 280px;
-    transition: 0.4s;
-}
-.input-field {
-    width: 100%;
-    margin: 5px 0;
-    padding: 10px 10px;
-    border-left: 0;
-    border-top: 0;
-    border-right: 0;
-    border-bottom: 1px solid #fff;
-    outline: none;
-    background: transparent;
-    color: #fff;
-}
-.inputGroup .submit_btn {
-    color: #fff;
-    width: 100%;
-    padding: 10px 30px;
-    outline: none;
-    display: block;
-    margin: auto;
-    border: 0;
-    border-radius: 30px;
-    cursor: pointer;
-    background: linear-gradient(-45deg, #5f91ff, rgba(0, 0, 255, 0));
-}
-.inputGroup .submit_btn:hover {
-    border: 1px solid #fff;
-}
-.input-checkBox {
-    margin: 30px 10px 30px 0;
-}
-.inputGroup span {
-    color: #777;
-    font-size: 13px;
-}
-#login {
-    left: 60px;
-}
-#register {
-    left: 450px;
 }
 .night {
     position: relative;

@@ -210,7 +210,7 @@ body.dark {
     justify-content: space-between;
 }
 .hd-top-mobile {
-    display: block;
+    width: 100%;
 }
 .task-bar {
     display: flex;

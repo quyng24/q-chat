@@ -38,13 +38,6 @@ body.dark {
     padding: 0 10px;
     position: relative;
 }
-.seting-and-user img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
 .seting-and-user i {
     font-size: 18px;
     width: 40px;
@@ -58,10 +51,10 @@ body.dark {
 .seting-and-user i:hover {
     background: var(--color-border);
 } 
-.setting, .setting1 {
+.setting {
     display: none;
 }
-.setting.demo, .setting1.demo1 {
+.setting.demo {
     position: fixed;
     top: 0;
     left: 0;
@@ -71,18 +64,25 @@ body.dark {
     z-index: 2;
     display: block;
 }
-.setting.demo .wrapper-btn, .setting1.demo1 .wrapper-btn{
+.setting.demo .wrapper-btn {
     width: 200px;
     height: 50px;
     background: var(--color-background);
     display: flex;
-    margin-top: 50%;
     margin-left: 5%;
-    border-radius: 5px;
+    border: 1px solid var(--color-border);
     display: flex;
     justify-content: space-between;
     align-items: center;
     animation: presentlyLeft 0.3s ease-in-out;
+}
+.setting.demo .wrapper-btn:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.setting.demo .wrapper-btn:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .wrapper-btn p {
     font-size: 18px;
@@ -104,6 +104,22 @@ body.dark {
     width: 50px;
     border-radius: 10px;
     margin-right: 10px;
+}
+.btn-2-1 {
+    width: 100%; 
+    display: flex; 
+    justify-content: space-between; 
+    text-decoration: none;
+}
+.btn-2-1 i {
+    width: 28px;
+    border-radius: 50%;
+    padding: 5px;
+    color: var(--color-text-nho);
+    margin-right: 20px;
+}
+.btn-2-1 i:hover {
+    background: var(--hover);
 }
 .nut2 label {
     background: #f4f4f4;
@@ -292,7 +308,6 @@ body.dark {
         max-height: 100vh;
         margin: 0;
         border-radius: 0;
-        transition: 0.3s;
     }
     .seting-and-user.hidden, .group-user.hidden {
         display: none;
@@ -314,11 +329,6 @@ body.dark {
         background: var(--background-body);
         padding: 30px;
         margin: 0;
-        border: 1px solid var(--color-border);
-    }
-    .seting-and-user img {
-        width: 60px;
-        height: 60px;
         border: 1px solid var(--color-border);
     }
     .user-chat:last-child {
@@ -361,11 +371,23 @@ body.dark {
         padding: 15px;
         margin: 10px;
     }
-    .setting.demo .wrapper-btn,
-    .setting1.demo1 .wrapper-btn {
+    .setting.demo {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
         width: 100vw;
-        margin: 50% 0 0 0;
+        height: 100vh;
+    }
+    .setting.demo .wrapper-btn {
+        width: 100vw;
+        margin: 0;
         animation: presentlyBottom 0.3s ease;
+    }
+    .nut2-1 {
+        width: 28px;
+        border-radius: 50%;
+        padding: 5px;
+        margin-right: 20px;
     }
     @keyframes presentlyBottom {
         from {

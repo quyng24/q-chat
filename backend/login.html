@@ -25,7 +25,7 @@
                 <label><input type="checkbox"> Remember me</label>
                 <a href="#">Forgot Password?</a>
             </div>
-            <button id="" type="submit" onclick="login()">Login</button>
+            <button id="" type="submit">Login</button>
         </form>
     </div>
     <div class="night">
@@ -51,32 +51,6 @@
         <div class="shooting_star"></div>
     </div>
     <script>
-        function login() {
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            const loginMessage = document.getElementById('login-message');
-
-            fetch('http://localhost:3000/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ username, password })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    // Chuyển hướng đến trang chính sau khi đăng nhập thành công
-                    window.location.href = './index.html';
-                } else {
-                    loginMessage.textContent = 'Invalid credentials. Please try again.';
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                loginMessage.textContent = 'An error occurred. Please try again later.';
-            });
-        }
     </script>
 </body>
 </html>
